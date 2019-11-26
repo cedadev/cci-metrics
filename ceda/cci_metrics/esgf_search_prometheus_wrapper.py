@@ -1,5 +1,8 @@
 from ceda.unittest_prometheus_wrapper.flask_app import flask_app_factory
+from ceda.cci_odp_ops_tests.test_csw import CSWTestCase
 from ceda.cci_odp_ops_tests.test_esgf_search import EsgfSearchTestCase
+from ceda.cci_odp_ops_tests.test_ftp import FtpTestCase
+from ceda.cci_odp_ops_tests.test_tds_opendap import TdsOpendapTestCase
 
 ''' Wrapper script to launch Flask app, to display results of esgf search unit tests
 '''
