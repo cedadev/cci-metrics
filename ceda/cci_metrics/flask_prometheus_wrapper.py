@@ -74,7 +74,7 @@ TdsWmsTestCase = tds_wms_testcase_factory(CATALOG_URI)
 TdsWmsTestCase.__name__ = TdsWmsTestCase.__name__ + 'Wms'
 
 tds_wms_container = TestDataContainer(TdsWmsTestCase, test_names=get_test_names(TdsWmsTestCase, 
-                                                                                test_sub_title='wms'
+                                                                                test_sub_title='wms',
                                                                                 restrict=5),
                                       service_name='tds_wms_test_cases')
 cci_data_containers.append(tds_wms_container)
