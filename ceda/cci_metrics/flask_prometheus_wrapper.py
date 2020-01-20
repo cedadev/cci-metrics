@@ -30,7 +30,7 @@ def get_test_names(TestCase, test_sub_title='', restrict=None):
                 break
 
         if a.startswith('test'):
-            test_name_list.append(a)
+            test_name_list.append(a + '_' + test_sub_title)
 
     return test_name_list
 
@@ -73,14 +73,18 @@ TdsWmsTestCase = tds_wms_testcase_factory(CATALOG_URI)
 # This means they'll have separate paths - /metrics/TdsCatalogServiceTestCaseWms
 TdsWmsTestCase.__name__ = TdsWmsTestCase.__name__ + 'Wms'
 
-tds_wms_container = TestDataContainer(TdsWmsTestCase, test_names=get_test_names(TdsWmsTestCase, restrict=5),
+tds_wms_container = TestDataContainer(TdsWmsTestCase, test_names=get_test_names(TdsWmsTestCase, 
+                                                                                test_sub_title='wms'
+                                                                                restrict=5),
                                       service_name='tds_wms_test_cases')
 cci_data_containers.append(tds_wms_container)
 
 
 TdsWcsTestCase = tds_wcs_testcase_factory(CATALOG_URI)
 TdsWcsTestCase.__name__ = TdsWcsTestCase.__name__ + 'Wcs'
-tds_wcs_container = TestDataContainer(TdsWcsTestCase, test_names=get_test_names(TdsWcsTestCase, restrict=5),
+tds_wcs_container = TestDataContainer(TdsWcsTestCase, test_names=get_test_names(TdsWcsTestCase,
+                                                                                test_sub_title='wcs',
+                                                                                restrict=5),
                                       service_name='tds_wcs_test_cases')
 cci_data_containers.append(tds_wcs_container)
 
