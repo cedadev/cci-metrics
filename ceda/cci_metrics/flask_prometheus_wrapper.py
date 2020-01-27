@@ -30,7 +30,7 @@ def get_test_names(TestCase, test_sub_title='', restrict=None):
                 break
 
         if a.startswith('test'):
-            test_name_list.append(a + test_sub_title)
+            test_name_list.append(a)
 
     return test_name_list
 
