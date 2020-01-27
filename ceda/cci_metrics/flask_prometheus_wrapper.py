@@ -22,8 +22,6 @@ def get_test_names(TestCase, test_sub_title='', restrict=None):
         `restrict` attribute is used to add only first X (e.g. 50) tests
     '''
     test_name_list = []
-    # Has an underscore been appended to test_sub_title?
-    append_underscore = False
 
     for a, b in zip (TestCase.__dict__, range(len(TestCase.__dict__))):
         if restrict is not None:
@@ -32,10 +30,6 @@ def get_test_names(TestCase, test_sub_title='', restrict=None):
                 break
 
         if a.startswith('test'):
-            if test_sub_title != '' and append_underscore is False:
-                test_sub_title = '_' + test_sub_title
-                append_underscore = True
-
             test_name_list.append(a + test_sub_title)
 
     return test_name_list
