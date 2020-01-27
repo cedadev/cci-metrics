@@ -1,5 +1,4 @@
 beautifulsoup4==4.8.1
--e git+https://github.com/MRichards99/cci-metrics.git@ba7e28417eadd33279f383b47f8807d61a48aedf#egg=cci_metrics
 -e git+https://github.com/cedadev/cci-odp-ops-tests-csw.git@a933afec0dba26b5c837efc7bebad2633e8375da#egg=cci_odp_ops_tests_csw
 -e git+https://github.com/cedadev/cci-odp-ops-tests-esgf-search.git@3e07fcfe9b697e05a8998e5dc87d5d4050e03a0e#egg=cci_odp_ops_tests_esgf_search
 -e git+https://github.com/cedadev/cci-odp-ops-tests-ftp.git@d3c437990873cac4e795c7e03e87ce91c22d1f33#egg=cci_odp_ops_tests_ftp
