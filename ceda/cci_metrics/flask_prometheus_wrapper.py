@@ -38,7 +38,7 @@ def get_test_names(TestCase, test_sub_title='', restrict=None):
 cci_data_containers = []
 
 # Import after environment variable set so it picks up the value in CSW code
-os.environ['CCI_CSW_TESTCASE_VOCAB_SERVER_URI'] = 'vocab.ceda.ac.uk'
+os.environ['CCI_CSW_TESTCASE_VOCAB_SERVER_URI'] = 'http://vocab.ceda.ac.uk'
 from ceda.cci_odp_ops_tests.test_csw import CSWTestCase
 
 csw_container = TestDataContainer(CSWTestCase,
@@ -56,7 +56,7 @@ ftp_container = TestDataContainer(FtpTestCase, test_names=get_test_names(FtpTest
 cci_data_containers.append(ftp_container)
 
 # Setting CCI endpoint
-os.environ['CCI_TDS_OPENDAP_HOSTNAME'] = 'cci-odp-data.ceda.ac.uk'
+os.environ['CCI_TDS_OPENDAP_HOSTNAME'] = 'data.cci.ceda.ac.uk'
 # Import after environment variable set so it picks up the value in Opendap code
 from ceda.cci_odp_ops_tests.test_tds_opendap import TdsOpendapTestCase
 
@@ -66,7 +66,7 @@ cci_data_containers.append(opendap_container)
 
 
 # TDS OGC Services
-CATALOG_URI = 'http://cci-odp-data.ceda.ac.uk/thredds/esacci/catalog.xml'
+CATALOG_URI = 'https://data.cci.ceda.ac.uk/thredds/esacci/catalog.xml'
 TdsWmsTestCase = tds_wms_testcase_factory(CATALOG_URI)
 # Editing name attribute to dfferentiate it from Wcs test cases
 # This means they'll have separate paths - /metrics/TdsCatalogServiceTestCaseWms
