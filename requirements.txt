@@ -27,5 +27,6 @@ requests-cache==0.5.2
 six==1.15.0
 -e git+https://github.com/cedadev/tds_ogc_services_check.git@c5a561328b73ad0951f3bf954518b7fb17a93319#egg=tds_ogc_services_check
 urllib3==1.26.2
+waitress==1.4.4
 Werkzeug==1.0.1
 xarray==0.16.1
