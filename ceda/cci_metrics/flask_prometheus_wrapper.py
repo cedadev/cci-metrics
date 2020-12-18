@@ -66,7 +66,7 @@ cci_data_containers.append(opendap_container)
 
 
 # TDS OGC Services
-CATALOG_URI = 'https://data.cci.ceda.ac.uk/thredds/esacci/catalog.xml'
+CATALOG_URI = 'https://data.cci.ceda.ac.uk/thredds/catalog.xml'
 TdsWmsTestCase = tds_wms_testcase_factory(CATALOG_URI)
 # Editing name attribute to dfferentiate it from Wcs test cases
 # This means they'll have separate paths - /metrics/TdsCatalogServiceTestCaseWms
